@@ -60,3 +60,11 @@ input {
 .btn {
   padding: 10px;
 }
+
+.win {
+  color: green;
+}
+
+.draw {
+  color: yellow;
+}

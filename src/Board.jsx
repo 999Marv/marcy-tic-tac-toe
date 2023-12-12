@@ -45,17 +45,32 @@ export default function Board() {
 
   const winner = calculateWinner(board);
   let status;
+  let color;
 
   if (winner) {
     status = 'Winner: ' + winner;
+    color = 'win';
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+  }
+
+  let full = true;
+
+  for (let i = 0; i < board.length; i++) {
+    if (!board[i]) {
+      full = false;
+    }
+  }
+
+  if (full) {
+    status = 'Draw';
+    color = 'draw';
   }
 
   return (
     <>
       <Players />
-      <div className="status">{status}</div>
+      <div className={color}>{status}</div>
       <section>
         <Square val={board[0]} squareClick={() => handleSquare(0)} />
         <Square val={board[1]} squareClick={() => handleSquare(1)} />

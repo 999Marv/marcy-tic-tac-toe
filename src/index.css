@@ -40,3 +40,24 @@ button:hover {
   background-color: #585757;
   scale: 1.1;
 }
+
+.players {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
+input {
+  width: 70px;
+}
+
+.btn {
+  padding: 10px;
+}
